@@ -1,0 +1,7 @@
+mov 6
+:1
+dec
+push_x
+pop
+jne 1
+end
