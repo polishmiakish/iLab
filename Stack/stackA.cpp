@@ -14,9 +14,9 @@ int main()
 	comm = fopen("commands.txt", "r");
 	wtd = fopen("whattodo.txt", "r");
 	char b[7];
-	char c[15][10];
+	char c[16][10];
 	int i;
-	for (i = 0; i < 15; i++)
+	for (i = 0; i < 16; i++)
 	{
 		fscanf(comm, "%s", c[i]);
 		printf("%d-", i);

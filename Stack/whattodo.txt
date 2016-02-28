@@ -1,7 +1,5 @@
-mov 6
-:1
-dec
-push_x
+push 5
+push 3
+lea 8
 pop
-jne 1
 end

@@ -40,12 +40,12 @@ int main()
 	for (j = 0; j < N; j++)
  	{
 		fscanf(arr, "%d", &buff[j]);
-		printf("%d ", buff[j]);
+		//printf("%d ", buff[j]);
 	}	
 	
 	int len = j;
 	int l = 0;
-	printf("%d", len);
+	//printf("%d", len);
 	
 	for(j = 0; j < len; j++)
  	{
@@ -120,6 +120,10 @@ int main()
 				break;
 			case 14:
 				i = 100;
+				break;
+			case 15:
+				j++;
+				lea(&a, buff[j]);
 				break;
 			default : break; 
 		}

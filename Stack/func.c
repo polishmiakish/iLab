@@ -71,6 +71,20 @@ struct Stack * add(struct Stack * a)
 	return a;
 }
 
+struct Stack * lea(struct Stack * a, int t)
+{
+	int k = 1;
+	int i;
+	for (i = 0; i < t; i++)
+	{
+		k = 2 * k;
+	}
+	i=Pop(a) + k * Pop(a);
+	printf("k = %d, t = %d, i = %d", k, t, i);
+	Push(a, i);
+	return a;
+}
+
 struct Stack * sub(struct Stack * a)
 {
 	int i;
@@ -140,7 +154,7 @@ void assembl(FILE * wtd, FILE * arr, char c[][10])
 	FILE * lab_f;
 	lab_f=fopen("lab.txt", "w");
 	char b[7];
-	int k;
+	int k, r;
 	int j = 0;
 	int i = 100;
 	int d;
@@ -232,18 +246,19 @@ void assembl(FILE * wtd, FILE * arr, char c[][10])
 				i=14;
 			}
 			
-			//if (strcmp(b, c[15]) == 0)
-			//{
-			//	i=15;
-			//}
+			if (strcmp(b, c[15]) == 0)
+			{
+				fscanf(wtd, "%d", &k);
+				i=15;
+			}
 			
-			if ((i==1) || (i==7) || (i==12) || (i==13))
+			if ((i == 1) || (i == 7) || (i == 12) || (i == 13) || (i == 15))
 			{
 				fprintf(arr, "%d %d ", i, k);
 				j++;
 			}
 			
-			else  if	(i<100)
+			else if	(i < 100)
 					{
 						fprintf(arr, "%d ", i);
 					}

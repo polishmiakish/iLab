@@ -13,4 +13,4 @@ dec
 jmp
 jne
 je
-ax
+lea
