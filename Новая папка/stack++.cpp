@@ -12,12 +12,13 @@ class Stack
 		Stack();
 		~Stack();
 		Stack_Ok();
+		void Stack_Dump();
 		int Push(int a);
 		int Pop();
 };
 
 Stack::Stack() : 
-	array_ {0},
+	array_{0},
 	size_(0)
 {}
 
@@ -45,6 +46,16 @@ int Stack::Pop()
 	return array_[size_];
 }
 
+void Stack::Stack_Dump()
+{
+	int i;
+	for (i = 0; i < size_; i++)
+	{
+		std::cout << array_[i] << " ";
+	}
+	std::cout << "\n";
+}
+
 int main()
 {
 	int num;
@@ -52,6 +63,7 @@ int main()
 	std::cin >> num;
 	Stack st;
 	st.Push(num);
+	st.Stack_Dump();
 	std::cout << st.Pop();
 	return 0;
 }
