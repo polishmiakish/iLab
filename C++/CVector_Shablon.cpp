@@ -19,7 +19,7 @@ class CVector
 			}
 			std::cout<<"Vector had been constructed\n"<<std::endl;
 		};
-		~CVector(){
+		~CVector() {
 			delete[] elem_;
 			elem_ = NULL;
 			std::cout << "Destructor works\n";
